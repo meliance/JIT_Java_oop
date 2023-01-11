@@ -1,46 +1,32 @@
-package com.mycompany.test;
-abstract class phone{
-     abstract void call();
-     void search(){
-         System.out.println("search any thing using your phone");
+
+package com.mycompany.quize1;
+interface Mamal{
+    void Goat();
+    void Lion();
+}
+interface Bird{
+    void Eagle();
+}
+ class animal implements Mamal, Bird{
+     @Override
+     public void Goat(){
+         System.out.println("Goat eats grass");
+     }@Override
+     public void Lion(){
+             System.out.println("Lion is King of animal");
      }
-    // abstract void record();
-}
-abstract class iphone extends phone{
-    abstract void camera();
-    @Override
-    abstract void call();
-    void play(){
-        System.out.println("play music by iphone");
-    }
-}
-class sumsung extends iphone{
-
-    @Override
-    void camera() {
-        System.out.println("iphone camera style");
-    }
-
-    @Override
-    void call() {
-        System.out.println("make a call by your phone ");
-    }
-
-   // @Override
-    void record() {
-        System.out.println("recored by sumsung ");
-    }
-}
-public class Test {
+     @Override
+     public void Eagle(){
+         System.out.println("Eagle can flay");
+     }
+ }
+public class Quize1 {
 
     public static void main(String[] args) {
-        sumsung ph=new sumsung();
-        ph.camera();
-        ph.call();
-        ph.search();
-        ph.record();
-        ph.play();
-        System.out.println();
+        animal an= new animal();
+        an.Goat();
+        an.Lion();
+        an.Eagle();
+        System.out.println("this program is the concept of multiple interface.");
     }
 }
-
