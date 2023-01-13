@@ -3,7 +3,7 @@ package com.mycompany.studentinfo;
 
 public class StudentInfo {
     String name;
-    int id;
+    String id;
     String department;
     public StudentInfo(){
         name="no name";
@@ -51,7 +51,7 @@ public class StudentInfo {
     public static void main(String[] args) {
         StudentInfo s1,s2;
         s1=new StudentInfo();
-        s2= new StudentInfo("melaku muluken", 1476, "software");
+        s2= new StudentInfo("melaku muluken", RU1476, "software");
         s1.setName("abel dan");
         System.out.println(s1);
         System.out.println(" ");
