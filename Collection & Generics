@@ -1,0 +1,63 @@
+
+package com.mycompany.metadata;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Map;
+interface Meta <I,K,L>{
+    void dosomething(I []t);
+    void add(K []k);
+}
+
+public class MetaData <T,K> {
+    T x;
+    int y;
+    K key;
+    MetaData (T t,K k){
+      this.key=k;
+      this.x=t;
+    }
+  <Y> void displaAnyarray( Y[] anyarr){
+        for (Y x:anyarr){
+          System.out.println(x);
+      }  }  
+    
+  public static void main(String[] args) {
+    MetaData<String,Integer> md1= new MetaData("ABC",101);
+    MetaData<Double,Integer> md2= new MetaData(12.0,101);
+String[]days={"Mon","Tus","Wen"};
+System.out.println("Days of a week: ");
+      md1.displaAnyarray(days);
+      Integer [] idnum={100,101,102,103};
+      System.out.println("Array list of a number:" );
+      md2.displaAnyarray(idnum);
+       System.out.println();
+       LinkedList<String> names= new LinkedList();
+       names.add("Begna");
+              names.add("add");
+       names.add("awe");
+       names.add("dsfdsf");
+
+        System.out.println("display name of a person: "+ names);
+         Iterator it= names.iterator();
+ while(it.hasNext()){
+     System.out.println(it.next());
+ } 
+   Map<String,Integer> coutrycode = new HashMap(); 
+   coutrycode.put("ETH", 251);
+     coutrycode.put("SOL", 534);
+   coutrycode.put("USA", 1);
+   coutrycode.put("DJI", 678);
+   coutrycode.put("KEN", 193);
+   coutrycode.put("UK", 987);
+      System.out.println("display name of the country:");
+        System.out.println(coutrycode.keySet());
+        System.out.println("display country name with code value:");
+                System.out.println(coutrycode.values());
+
+        
+    }
+    
+}
+
